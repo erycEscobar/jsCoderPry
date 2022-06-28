@@ -25,13 +25,15 @@ const arrayUsers = [ ];
 
 function cargarBaseDeUsuarios() {
     let baseDeUsuarios = JSON.parse(localStorage.getItem('usuariosRegistrados'));
+    if (baseDeUsuarios == null) {
+        console.log("Aun no hay usuarios registrados");
+        return;
+    }
     console.log(baseDeUsuarios);
     for (const usuario of baseDeUsuarios) {
         arrayUsers.push(new User(usuario.nombre, usuario.email, usuario.nickName, usuario.password));
     }
 }
-
-cargarBaseDeUsuarios();
 
 
 
@@ -92,6 +94,7 @@ function registroUser() {
 
 
 formReg.addEventListener("submit", e=> {
+    cargarBaseDeUsuarios();
     e.preventDefault();
     let warnings = "";
     let entrar = false;
@@ -132,6 +135,7 @@ formReg.addEventListener("submit", e=> {
 
 
 formLog.addEventListener("submit", f=> {
+    cargarBaseDeUsuarios();
     f.preventDefault();
     let warnings = "";
     let entrar = false;

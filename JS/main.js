@@ -125,11 +125,21 @@ formReg.addEventListener("submit", e=> {
     }
     else {
         if (registroUser()) {
+            swal({
+                title: 'FELICITACIONES!',
+                text: `Su usuario fue sido creado con exito`,
+                icon: 'success',
+            });
             warnings += `Usuario creado con exito`;
             localStorage.setItem('usuariosRegistrados', JSON.stringify(arrayUsers));
             parrafo.innerHTML = warnings;
         }
         else {
+            swal({
+                title: 'ERROR',
+                text: 'Ya existe una cuenta con ese email, la cuenta no fue creada',
+                icon: 'error',
+            });
             warnings += `Ya existe una cuenta con ese mail, la cuenta no fue creada`;
             parrafo.innerHTML = warnings;
         }
@@ -159,12 +169,22 @@ formLog.addEventListener("submit", f=> {
         let emailUsr = emailLog.value;
         let passwordUsr = passLog.value;
         if (verificacionUsr(emailUsr, "email", passwordUsr)) {
+            swal({
+                title: 'BIENVENIDO!',
+                text: `Hola ${emailUsr}`,
+                icon: 'success',
+            });
             warnings += `Bienvenido ${emailUsr}`;
             parrafoLog.innerHTML = warnings;
             hideLogMenu();
             startAppPage(emailUsr);
         }
         else {
+            swal({
+                title: 'ERROR',
+                text: 'email/contraseña invalidas',
+                icon: 'error',
+            });
             warnings += `email/contraseña invalidas`
             parrafoLog.innerHTML = warnings;
         }

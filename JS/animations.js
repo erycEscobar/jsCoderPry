@@ -4,12 +4,12 @@ window.addEventListener("resize", anchoPagina);
 
 
 
-var contenedor_login_register = document.querySelector(".contenedor__login-register");
-var formulario_login = document.querySelector(".formulario__login");
-var formulario_register = document.querySelector(".formulario__register");
-var caja_trasera_login = document.querySelector(".caja__trasera-login");
-var caja_trasera_register = document.querySelector(".caja__trasera-register");
-var contenedor_todo = document.querySelector(".contenedor__todo");
+let contenedor_login_register = document.querySelector(".contenedor__login-register");
+let formulario_login = document.querySelector(".formulario__login");
+let formulario_register = document.querySelector(".formulario__register");
+let caja_trasera_login = document.querySelector(".caja__trasera-login");
+let caja_trasera_register = document.querySelector(".caja__trasera-register");
+let contenedor_todo = document.querySelector(".contenedor__todo");
 
 
 

@@ -9,6 +9,16 @@ const parrafoLog = document.getElementById("warningsLog");
 const emailLog = document.getElementById("emailLog");
 const passLog = document.getElementById("passwordLog");
 
+const API = "./DATA/usersData.json";
+
+const getData = async () => {
+    const response = await fetch(API);
+    const data = await response.json();
+    return data;
+};
+
+
+
 
 class User {
     constructor (nombre, email, nickName, password) {
@@ -23,8 +33,8 @@ const arrayUsers = [ ];
 
 
 
-function cargarBaseDeUsuarios() {
-    let baseDeUsuarios = JSON.parse(localStorage.getItem('usuariosRegistrados'));
+async function cargarBaseDeUsuarios() {
+    let baseDeUsuarios = await getData();
     if (baseDeUsuarios == null) {
         console.log("Aun no hay usuarios registrados");
         return;
@@ -36,11 +46,9 @@ function cargarBaseDeUsuarios() {
             arrayUsers.push(new User(usuario.nombre, usuario.email, usuario.nickName, usuario.password));
         }
     }
-}
+};
 
 cargarBaseDeUsuarios();
-
-
 
 function printNewUser(find, propiedad) {
     let users = arrayUsers.filter(user => user[propiedad] === find);
@@ -131,7 +139,9 @@ formReg.addEventListener("submit", e=> {
                 icon: 'success',
             });
             warnings += `Usuario creado con exito`;
+
             localStorage.setItem('usuariosRegistrados', JSON.stringify(arrayUsers));
+
             parrafo.innerHTML = warnings;
         }
         else {

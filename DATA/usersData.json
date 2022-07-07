@@ -1,0 +1,73 @@
+[
+
+    {
+        "nombre": "user01",
+        "email": "user01@gmail.com",
+        "nickName": "user01",
+        "password": "user0123456789"
+    },
+
+    {
+        "nombre": "user02",
+        "email": "user02@gmail.com",
+        "nickName": "user02",
+        "password": "user0123456789"
+    },
+
+    {
+        "nombre": "user03",
+        "email": "user03@gmail.com",
+        "nickName": "user03",
+        "password": "user0123456789"
+    },
+
+    {
+        "nombre": "user04",
+        "email": "user04@gmail.com",
+        "nickName": "user04",
+        "password": "user0123456789"
+    },
+
+    {
+        "nombre": "user05",
+        "email": "user05@gmail.com",
+        "nickName": "user05",
+        "password": "user0123456789"
+    },
+
+    {
+        "nombre": "user06",
+        "email": "user06@gmail.com",
+        "nickName": "user06",
+        "password": "user0123456789"
+    },
+
+    {
+        "nombre": "user07",
+        "email": "user07@gmail.com",
+        "nickName": "user07",
+        "password": "user0123456789"
+    },
+
+    {
+        "nombre": "user08",
+        "email": "user08@gmail.com",
+        "nickName": "user08",
+        "password": "user0123456789"
+    },
+
+    {
+        "nombre": "user09",
+        "email": "user09@gmail.com",
+        "nickName": "user09",
+        "password": "user0123456789"
+    },
+
+    {
+        "nombre": "user10",
+        "email": "user10@gmail.com",
+        "nickName": "user10",
+        "password": "user0123456789"
+    }
+
+]
